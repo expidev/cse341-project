@@ -1,4 +1,4 @@
-const homeController = require("../controllers/homeController")
+const homeController = require("../controllers/")
 const express = require("express")
 
 

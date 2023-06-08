@@ -1,7 +1,7 @@
 const homeController = {}
 
 homeController.sendName = (req, res) => {
-    res.send("Mandresy Ramilison")
+    res.json("Mandresy Rasoa")
 }
 
 module.exports = homeController

@@ -1,10 +1,6 @@
-const homeController = require("../controllers/")
-const express = require("express")
+const express = require('express');
+const router = express.Router();
 
+router.use('/contacts', require('./contacts'))
 
-const routes = express.Router()
-
-routes.get('/', homeController.sendName)
-
-module.exports = routes;
-
+module.exports = router;

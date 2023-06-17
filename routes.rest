@@ -36,39 +36,39 @@ content-type: application/json
 DELETE http://localhost:3000/contacts/648a8fc472ca88b18963044e HTTP/1.1
 
 // PRODUCTION Deploy
+
 ### Get all contacts
-GET https://cse341-instructor.herokuapp.com/contacts
+GET https://nas-cse341.onrender.com/contacts HTTP/1.1
 
 
 ### Get contact by id
-GET https://cse341-instructor.herokuapp.com/contacts/622023f642f9ab4cd6e060b3
+GET https://nas-cse341.onrender.com/contacts/6483e52b7b17ef01b74007e0 HTTP/1.1
 
 
 ### Create contact
-POST https://cse341-instructor.herokuapp.com/contacts HTTP/1.1
+POST https://nas-cse341.onrender.com/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
+    "firstName":"Rojo",
+    "lastName":"Joepla",
+    "email":"rojoepla@gmail.com",
+    "favoriteColor":"White",
+    "birthday":"1970-12-04"
 }
 
 
 ### PUT contact
-PUT https://cse341-instructor.herokuapp.com/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT https://nas-cse341.onrender.com/contacts/6483e52b7b17ef01b74007e0 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
+    "firstName": "Mandresy",
+    "lastName":"Rasoa",
+    "email":"mandresyrasoa@gmail.com",
+    "favoriteColor":"red",
+    "birthday":"1995-02-08"
 }
-
-
 ### DELETE contact
-DELETE https://cse341-instructor.herokuapp.com/contacts/6220e34083149913680f9a64 HTTP/1.1
+DELETE https://nas-cse341.onrender.com/contacts/648aa658193e75f17a86c027 HTTP/1.1
+

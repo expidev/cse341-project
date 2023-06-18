@@ -6,7 +6,7 @@ const doc = {
       description: 'Contacts API for L04 assignment',
     },
     host: 'nas-cse341.onrender.com',
-    schemes: ['http'],
+    schemes: ['https'],
 };
 
 const outputFile = './swagger.json';

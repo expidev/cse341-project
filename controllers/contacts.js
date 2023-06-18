@@ -35,7 +35,7 @@ const createUser = async (req, res, next) => {
                               .collection('contacts')
                               .insertOne(newUser)
   if (response.acknowledged) {
-    res.status(201).send()
+    res.status(201).json({"success" : "successful"})
   } else {
     res.status(500).json(
       response.error || 'An error occured while inserting the user.'
@@ -59,7 +59,7 @@ const updateUser = async (req, res, next) => {
                                     {_id: userToUpdateId},
                                     updatedUser
                                   )
-  console.log(response)
+
   if (response.modifiedCount > 0) {
     res.status(204).send()
   } else {
@@ -77,7 +77,6 @@ const deleteUser = async (req, res, next) => {
                                 .deleteOne(
                                     {_id: userToDeleteId}
                                 )
-  console.log(response)
   if (response.deletedCount > 0) {
     res.status(204).json({"success": "The user was deleted successfully"})
   } else {

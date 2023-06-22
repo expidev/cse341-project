@@ -5,8 +5,8 @@ const doc = {
       title: 'My API',
       description: 'Contacts API for L04 assignment',
     },
-    host: 'localhost:3000',
-    schemes: ['http'],
+    host: 'https://nasproject-cse341.onrender.com',
+    schemes: ['https'],
 };
 
 const outputFile = './swagger.json';

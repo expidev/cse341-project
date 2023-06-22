@@ -5,7 +5,7 @@ const doc = {
       title: 'My API',
       description: 'Contacts API for L04 assignment',
     },
-    host: 'https://nasproject-cse341.onrender.com',
+    host: 'nasproject-cse341.onrender.com',
     schemes: ['https'],
 };
 

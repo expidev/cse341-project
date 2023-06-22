@@ -5,7 +5,7 @@
     "description": "Contacts API for L04 assignment",
     "version": "1.0.0"
   },
-  "host": "https://nasproject-cse341.onrender.com",
+  "host": "nasproject-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

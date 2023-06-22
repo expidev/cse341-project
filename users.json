@@ -1,0 +1,72 @@
+[
+    {
+        "firstName": "Menja",
+        "lastName": "Harimiarina",
+        "email": "menjaharimiarina@gmail.com",
+        "gender": "female",
+        "birthday": "1986-09-06",
+        "address": "Lot ITS 10 Ter C Andranonahoatra",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Fanja",
+        "lastName": "Andria",
+        "email": "fanjariah@gmail.com",
+        "gender": "female",
+        "birthday": "1990-03-16",
+        "address": "Lot IPS 06 Ter Sakambahiny",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Tommy",
+        "lastName": "Silver",
+        "email": "tommysilver@gmail.com",
+        "gender": "male",
+        "birthday": "2002-01-02",
+        "address": "Lot IB 40 Morafeno 2",
+        "city": "Toamasina",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Nantenaina",
+        "lastName": "Harivonjy",
+        "email": "nantenainaharivonjy@gmail.com",
+        "gender": "male",
+        "birthday": "2001-07-17",
+        "address": "Lot ITS 36 Ter Beravina",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Kenedi",
+        "lastName": "Monique",
+        "email": "kenedimonique@gmail.com",
+        "gender": "male",
+        "birthday": "1997-04-23",
+        "address": "Lot AB 10 Ankatsepy",
+        "city": "Mahajanga",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Henintsoa",
+        "lastName": "Rasoanaivo",
+        "email": "henintsoarasoanaivo@gmail.com",
+        "gender": "female",
+        "birthday": "1980-10-01",
+        "address": "Lot DC 66 Rianala",
+        "city": "Isalo",
+        "country": "Madagascar"
+    },
+    {
+        "firstName": "Benja",
+        "lastName": "Arson",
+        "email": "benjarson@gmail.com",
+        "gender": "male",
+        "birthday": "1975-05-05",
+        "address": "Lot IPC 5 Ambohipo",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    }
+]

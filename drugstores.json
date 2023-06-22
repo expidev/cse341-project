@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Pharmacie Sandry",
+        "telephone": "+261 32 10 230 26",
+        "email": "customer@sandry.com",
+        "address": "ITS 20 Rue Sakambahiny",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "name": "Pharmacie Colombe",
+        "telephone": "+261 20 35 350 30",
+        "email": "pharma@colombe.com",
+        "address": "ITS 16 B Rue Cité",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "name": "Pharmacie Antaninarenina",
+        "telephone": "+261 20 60 539 21",
+        "email": "antaninarenina.pharma@gmail.com",
+        "address": "60 Rue Antaninarenina",
+        "city": "Antananarivo",
+        "country": "Madagascar"
+    },
+    {
+        "name": "Pharmacie Morafeno",
+        "telephone": "+261 34 43 124 98",
+        "email": "pharmaciedemorafeno@gmail.com",
+        "address": "AB 10 Morafeno Ville",
+        "city": "Toamasina",
+        "country": "Madagascar"
+    },
+    {
+        "name": "Pharmacie Ampitatafica",
+        "telephone": "+261 32 22 099 22",
+        "email": "serviceclient@pharmampitatafika.com",
+        "address": "ITU 42 Ter Ampitatafika",
+        "city": "Fianarantsoa",
+        "country": "Madagascar"
+    }
+]

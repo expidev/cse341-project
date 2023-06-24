@@ -1,3 +1,4 @@
+const { drugstoreRules, validateDrugstore } = require("../utilities/drugstoreValidation")
 const express = require('express');
 const router = express.Router();
 
@@ -7,9 +8,17 @@ router.get('/', contactsController.getAllDrugstores);
 
 router.get('/:id', contactsController.getSingleDrugstore);
 
-router.post('/', contactsController.createDrugstore);
+router.post('/', 
+    drugstoreRules(),
+    validateDrugstore,    
+    contactsController.createDrugstore
+);
 
-router.put('/:id', contactsController.updateDrugstore);
+router.put('/:id', 
+    drugstoreRules(),
+    validateDrugstore,
+    contactsController.updateDrugstore
+);
 
 router.delete('/:id', contactsController.deleteDrugstore);
 

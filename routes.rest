@@ -5,7 +5,7 @@ GET http://localhost:3000/users HTTP/1.1
 
 
 ### Get contact by id
-GET http://localhost:3000/users/6493355749fd66ea6dec6510 HTTP/1.1
+GET http://localhost:3000/users/6497393ba72cf4e52307b188 HTTP/1.1
 
 ### Create contact
 POST http://localhost:3000/users HTTP/1.1
@@ -39,7 +39,7 @@ content-type: application/json
 }
 
 ### DELETE contact
-DELETE http://localhost:3000/users/6493355749fd66ea6dec6510 HTTP/1.1
+DELETE http://localhost:3000/users/6497393ba72cf4e52307b188 HTTP/1.1
 
 ### Get all drugstores
 GET http://localhost:3000/drugstores HTTP/1.1
@@ -75,8 +75,8 @@ content-type: application/json
     "country": "Madagascar"
 }
 
-### DELETE contact
-DELETE http://localhost:3000/drugstores/6493354749fd66ea6dec6509 HTTP/1.1
+### DELETE drugstore
+DELETE http://localhost:3000/drugstores/6497408430eb0f5fe242d648 HTTP/1.1
 
 
 // PRODUCTION Deploy

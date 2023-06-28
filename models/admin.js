@@ -16,7 +16,8 @@ const create = async (mongodb, newAdmin) => {
   const response = await mongodb.getDb()
                               .collection('admins')
                               .insertOne(newAdmin)
-  return response
+  const insertedAdmin = response.ops[0];
+  return insertedAdmin 
 }
 
 module.exports = { 

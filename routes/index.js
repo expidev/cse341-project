@@ -1,6 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
+router.get('/', (req, res, next) => {
+    res.send(
+        req.session.user !== undefined ?
+        `Logged in as ${req.session.user.name.givenName}`
+        : "Logged Out"
+    )
+})
 router.use('/', require('./swagger'))
 router.use('/users', require('./users'))
 router.use('/drugstores', require('./drugstore'))

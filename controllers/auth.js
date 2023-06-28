@@ -1,4 +1,7 @@
 const passport = require('passport');
+const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
+const adminModel = require('../models/admin');
 
 const authenticateWithGoogle = async (req, res, next) => {
     try {
@@ -11,32 +14,34 @@ const authenticateWithGoogle = async (req, res, next) => {
 
 const handleGoogleCallback = async (req, res, next) => {
     try {
-      passport.authenticate('google', async (err, user) => {
+      passport.authenticate('google', async (err, admin) => {
         try {
           if (err) {
             console.error('Error while handling Google callback:', err);
             return res.status(500).json({ error: err.message });
           }
   
-          if (!user) {
-            console.log('No user received from Google.');
+          if (!admin) {
+            console.log('No admin received from Google.');
             return res.status(401).json({ message: 'Authentication failed' });
           }
 
-          const existingUser = await userModel.find(user.id);
+          const existingAdmin = await adminModel.getSingle(mongodb, admin.id);
   
-          if (existingUser) {
-            return res.status(200).json({ message: 'User already exists' });
+          if (existingAdmin) {
+            return res.status(200).json({ message: 'Admin already exists' });
           }
   
-          const newUser = await userModel.create(
-            user.id,
-            user.name.givenName,
-            user.name.familyName,
-            user.emails[0].value
+          const newAdmin = await adminModel.create(mongodb,
+            {
+                googleId: admin.id,
+                firstName: admin.name.givenName,
+                lastName: admin.name.familyName,
+                email: admin.emails[0].value
+            } 
           )
   
-          return res.status(200).json(newUser);
+          return res.status(200).json(newAdmin);
         } catch (error) {
           console.error('Error while handling Google callback:', error);
           return res.status(500).json({ error: err.message});

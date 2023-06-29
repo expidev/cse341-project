@@ -1,3 +1,4 @@
+const mongodb = require('../db/connect');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const adminModel = require('../models/admin')
 require('dotenv').config()
@@ -6,35 +7,36 @@ const configureGoogleStrategy = (passport) => {
   passport.use(
     new GoogleStrategy(
       {
-        clientID: process.env.GOOGLE_CLIENT_ID,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: process.env.GOOGLE_CALLBACK_URL,
+        clientID: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        callbackURL: process.env.REDIRECT_URI,
       },
-      (accessToken, refreshToken, profile, done) => {
+      async (accessToken, refreshToken, profile, done) => {
         try {
-            // Check if the admin already exists in the database
             const existingAdmin = await adminModel.getSingle(mongodb, profile.id);
   
-            if (existingAdmin) {
+            if (existingAdmin[0]) {
               // Admin already exists, return the admin object
               return done(null, existingAdmin);
             }
   
             // Admin does not exist, create a new admin in the database
-            const newAdmin = await adminModel.create({
-              googleId: profile.id,
-              displayName: profile.displayName,
-              email: profile.emails[0].value,
+            const newAdmin = await adminModel.create(mongodb, {
+                googleId: profile.id,
+                firstName: profile.name.givenName,
+                lastName: profile.name.familyName,
+                email: profile.emails[0].value
             });
   
             return done(null, newAdmin);
-          } catch (error) {
+
+        } 
+        catch (error) {
             return done(error);
-          }
-        return done(null, profile);
+        }
       }
     )
-  );
-};
+  )
+}
 
-module.exports = configureGoogleStrategy;
+module.exports = { configureGoogleStrategy };

@@ -3,7 +3,7 @@ const cors = require("cors")
 const passport = require('passport')
 const session = require('express-session')
 const { connectToDatabase } = require("./db/connect")
-const configureGoogleStrategy = require('./googleStrategy');
+const { configureGoogleStrategy } = require('./config/passport');
 
 require('dotenv').config()
 
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 app.use(session({
-  secret: process.env.SECRET,
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true
 }))

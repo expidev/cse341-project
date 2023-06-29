@@ -16,8 +16,10 @@ const create = async (mongodb, newAdmin) => {
   const response = await mongodb.getDb()
                               .collection('admins')
                               .insertOne(newAdmin)
-  const insertedAdmin = response.ops[0];
-  return insertedAdmin 
+  const insertedId = response.insertedId;
+  newAdmin._id = insertedId;
+  console.log(newAdmin);
+  return newAdmin;
 }
 
 module.exports = { 

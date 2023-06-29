@@ -4,7 +4,7 @@ const adminModel = require('../models/admin');
 
 const authenticateWithGoogle = async (req, res, next) => {
     try {
-        passport.authenticate('google', { scope: ['profile', 'email'] });
+        passport.authenticate('google', { scope: ['profile', 'email'] })(req, res, next);
     }
     catch(err) {
         res.status(500).json(err || "There is an error while authenticating with google")

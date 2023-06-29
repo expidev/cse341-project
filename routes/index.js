@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/', (req, res, next) => {
     res.send(
         req.session.user !== undefined ?
-        `Logged in as ${req.session.user.name.givenName}`
+        `Logged in as ${req.session.user.firstName}`
         : "Logged Out"
     )
 })

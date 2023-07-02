@@ -27,7 +27,7 @@ const configureGoogleStrategy = (passport) => {
                 lastName: profile.name.familyName,
                 email: profile.emails[0].value
             });
-  
+
             return done(null, newAdmin);
 
         } 

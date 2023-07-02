@@ -1,7 +1,8 @@
 const express = require("express")
 const cors = require("cors")
+const cookieParser = require("cookie-parser")
+const { checkJwtToken } = require("./utilities/authenticate")
 const passport = require('passport')
-const session = require('express-session')
 const { connectToDatabase } = require("./db/connect")
 const { configureGoogleStrategy } = require('./config/passport');
 
@@ -18,16 +19,10 @@ app.use(express.urlencoded({ extended: true }))
 
 // Enable json parsing middleware
 app.use(express.json())
-
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true
-}))
+app.use(cookieParser())
+app.use(checkJwtToken)
 
 app.use(passport.initialize())
-
-app.use(passport.session())
 
 configureGoogleStrategy(passport);
 

@@ -18,7 +18,6 @@ const create = async (mongodb, newAdmin) => {
                               .insertOne(newAdmin)
   const insertedId = response.insertedId;
   newAdmin._id = insertedId;
-  console.log(newAdmin);
   return newAdmin;
 }
 

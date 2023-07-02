@@ -8,7 +8,7 @@ const getSingle = async (mongodb, userId) => {
   const result = await mongodb
     .getDb()
     .collection('admins')
-    .find({ _id: userId });
+    .find({ googleId: userId });
   return result.toArray()
 };
 
